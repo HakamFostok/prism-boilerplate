@@ -9,7 +9,7 @@ namespace SharedModule
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            LogManager.LoadConfiguration("nlog.config").GetCurrentClassLogger();
+            LogManager.LoadConfiguration("nlog.config");
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
