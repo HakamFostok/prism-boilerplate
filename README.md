@@ -30,7 +30,7 @@
     - SharedModule: which basically contains all the basic setup for the project. <br/>
     - MainModule: which is basically an example module, it is just for demonstration. it contains No important functionality.
     
-## What is the benifits
+### What is the benifits
   1. FileDialogService which is MVVM way to call MessageBox, OpenFileDialogs, SaveFileDialog... and others
   2. LogService for logging service. <br/>
      NLog is installed and confguired.
