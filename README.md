@@ -1,11 +1,11 @@
 # What is prism-boilerplate
   Prism-Boilerplate is a basic setup for WPF application with Prism library installed, which is targeting .NET Core.
 
-# Technical Prerequisite
+## Technical Prerequisite
   1. Visual Studio 2019 
   2. NET Core 3.1
   
-# Personal Prerequisite
+### Personal Prerequisite
   You need to be familiar with 
   1. C#.
   2. WPF 
