@@ -1,22 +1,29 @@
-﻿using SharedModule;
+﻿using MainModule.Views;
+using Prism.Commands;
+using Prism.Services.Dialogs;
+using SharedModule;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 
 namespace MainModule.ViewModels
 {
     public class MainRegionViewModel : BaseViewModel
     {
-        private string _title;
-        public string Title
-        {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
-        }
-
+        public ICommand OpenWindowCommand { get; }
         public MainRegionViewModel()
         {
-            Title = "Hello World";
+            OpenWindowCommand = new DelegateCommand(OpenWindowCommandExecuted);
+        }
+
+        private void OpenWindowCommandExecuted()
+        {
+            _dialogService.ShowWindowTest(CloseWindowEventHandler);
+        }
+
+        private void CloseWindowEventHandler(IDialogResult dialogResult)
+        {
         }
     }
 }

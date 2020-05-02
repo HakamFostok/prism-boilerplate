@@ -8,7 +8,10 @@
              d:DesignHeight="450" d:DesignWidth="800"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True">
-    <Grid>
+   
+    
+    <StackPanel>
         <Label Content="{Binding Title}"></Label>
-    </Grid>
+        <Button Content="Open Window" Command="{Binding OpenWindowCommand}"></Button>
+    </StackPanel>
 </UserControl>
