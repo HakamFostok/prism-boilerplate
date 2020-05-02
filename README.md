@@ -42,8 +42,9 @@
      * IMessageBoxService: service to allow you access the MessageBox. <br/>
      * ILogService: service to allow you log errors and info. <br />
      
-  4. One class to manage all your Region Names.
-  5. LogService for logging service. <br/>
+  4. One class in the shared module to manage all your Region Names.
+  5. One class in the shared module to manage all your Events.
+  6. LogService for logging service. <br/>
      NLog is installed and confguired.
    
 ### Contributions
