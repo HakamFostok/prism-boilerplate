@@ -31,16 +31,20 @@
     - MainModule: which is basically an example module, it is just for demonstration. it contains No important functionality.
     
 ### What is the benifits
-  1. FileDialogService which is MVVM way to call MessageBox, OpenFileDialogs, SaveFileDialog... and others
-  2. LogService for logging service. <br/>
+  1. FileDialogService which is MVVM way to call OpenFileDialog.
+  2. MessageBoxService which is MVVM way to call WPF MessageBox methods.
+  3. Base View-Model already containing all the services in the project <br/>
+     The base View-Model will provide the access to : <br/>
+     * IEventAggregator: service to allow you send and subscribe for prism events. (**Prism Service**) <br/>
+     * IRegionManager: service to allow you manage the regions for the applications modules. (**Prism service**) <br/>
+     * IDialogService: service to allow you open new windows in MVVM way (**Prism service**) <br/>
+     * IFileDialogService: service to allow you access the OpenFileDialog. <br/>
+     * IMessageBoxService: service to allow you access the MessageBox. <br/>
+     * ILogService: service to allow you log errors and info. <br />
+     
+  4. One class to manage all your Region Names.
+  5. LogService for logging service. <br/>
      NLog is installed and confguired.
-  3. One class to manage all your Region Names.
-  4. Base View-Model already containing all the service in the project <br/>
-     The base View-Model will provide the access to  <br/>
-     IEventAggregator: service to allow you send and subscribe for prism events. **Prism Service** <br/>
-     IRegionManager: service to allow you manage the regions for the applications modules. **Prism service** <br/>
-     IFileDialogService: service to allow you access the FileDialogs and the MessageBox <br/>
-     ILogService: service to allow you log errors and info. <br />
    
 ### Contributions
    Pull Requests is very welcomed <br />
