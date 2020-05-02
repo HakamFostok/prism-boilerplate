@@ -14,6 +14,7 @@ namespace SharedModule
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterSingleton<IMessageBoxService, MessageBoxService>();
             containerRegistry.RegisterSingleton<IFileDialogService, FileDialogService>();
             containerRegistry.RegisterSingleton<ILogService, LogService>();
         }

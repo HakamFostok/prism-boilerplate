@@ -4,6 +4,7 @@ using Prism;
 using Prism.Events;
 using Prism.Mvvm;
 using Prism.Regions;
+using Prism.Services.Dialogs;
 using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -12,27 +13,35 @@ namespace SharedModule
 {
     public abstract class BaseViewModel : BindableBase, IActiveAware
     {
-        protected readonly IRegionManager _regionManager;
+        // custome interfaces
+        protected readonly IMessageBoxService _messageBoxService;
         protected readonly IFileDialogService _fileDialogService;
         protected readonly ILogService _logService;
+
+        // prism interfaces
+        protected readonly IDialogService _dialogService;
+        protected readonly IRegionManager _regionManager;
         protected readonly IEventAggregator _aggregator;
 
         protected BaseViewModel()
         {
-            _regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
+            _messageBoxService = ServiceLocator.Current.GetInstance<IMessageBoxService>(); 
             _fileDialogService = ServiceLocator.Current.GetInstance<IFileDialogService>();
             _logService = ServiceLocator.Current.GetInstance<ILogService>();
+
+            _dialogService = ServiceLocator.Current.GetInstance<IDialogService>();
+            _regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
             _aggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
         }
 
         protected void ShowParameterNullError([CallerMemberName] string callerName = null)
         {
-            _fileDialogService.ShowError($"Programming Error, parameter for '{callerName}' method is null");
+            _messageBoxService.ShowError($"Programming Error, parameter for '{callerName}' method is null");
         }
 
         protected void HandleException(Exception ex)
         {
-            _fileDialogService.ShowError(ex.Message);
+            _messageBoxService.ShowError(ex.Message);
             if (!(ex is BusinessException))
                 _logService.LogError(ex.ToString());
         }
