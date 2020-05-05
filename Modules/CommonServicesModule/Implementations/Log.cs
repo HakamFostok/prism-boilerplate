@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using Core;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Text;

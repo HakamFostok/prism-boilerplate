@@ -1,7 +1,7 @@
-﻿using MainModule.Views;
+﻿using Core;
+using MainModule.Views;
 using Prism.Commands;
 using Prism.Services.Dialogs;
-using SharedModule;
 using System;
 using System.Collections.Generic;
 using System.Text;

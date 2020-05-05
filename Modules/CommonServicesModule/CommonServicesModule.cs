@@ -1,11 +1,12 @@
-﻿using NLog;
+﻿using Core;
+using NLog;
 using Prism.Ioc;
 using Prism.Modularity;
 using System;
 
 namespace SharedModule
 {
-    public class SharedModule : IModule
+    public class CommonServicesModule : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {

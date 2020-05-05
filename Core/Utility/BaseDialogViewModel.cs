@@ -1,7 +1,7 @@
 using Prism.Services.Dialogs;
 using System;
 
-namespace SharedModule
+namespace Core
 {
     public class BaseDialogViewModel : BaseViewModel, IDialogAware
     {
