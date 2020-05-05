@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace SharedModule
+namespace Core
 {
     /// <summary>
     /// Service which provide access to the MessageBox methods and FileDialogs

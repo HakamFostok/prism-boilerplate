@@ -1,8 +1,8 @@
-﻿using MainModule.Views;
+﻿using Core;
+using MainModule.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
-using SharedModule;
 using System;
 
 namespace MainModule

@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
-        xmlns:shared="clr-namespace:SharedModule;assembly=SharedModule"
+        xmlns:core="clr-namespace:Core;assembly=Core"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
-        Title="First WPF Core App" Height="450" Width="800">
+        Title="WPF .NET Core Shell" Height="450" Width="800">
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="{x:Static shared:RegionNames.MainRegion}" />
+        <ContentControl prism:RegionManager.RegionName="{x:Static core:RegionNames.MainRegion}" />
     </Grid>
 </Window>

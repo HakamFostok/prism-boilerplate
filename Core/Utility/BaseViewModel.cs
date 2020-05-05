@@ -1,5 +1,4 @@
 ﻿using CommonServiceLocator;
-using Domain;
 using Prism;
 using Prism.Events;
 using Prism.Mvvm;
@@ -9,7 +8,7 @@ using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
-namespace SharedModule
+namespace Core
 {
     public abstract class BaseViewModel : BindableBase, IActiveAware
     {
@@ -25,7 +24,7 @@ namespace SharedModule
 
         protected BaseViewModel()
         {
-            _messageBoxService = ServiceLocator.Current.GetInstance<IMessageBoxService>(); 
+            _messageBoxService = ServiceLocator.Current.GetInstance<IMessageBoxService>();
             _fileDialogService = ServiceLocator.Current.GetInstance<IFileDialogService>();
             _logService = ServiceLocator.Current.GetInstance<ILogService>();
 
@@ -42,8 +41,7 @@ namespace SharedModule
         protected void HandleException(Exception ex)
         {
             _messageBoxService.ShowError(ex.Message);
-            if (!(ex is BusinessException))
-                _logService.LogError(ex.ToString());
+            _logService.LogError(ex.ToString());
         }
 
         protected void ActivateRegionWithView<T>(string regionName)

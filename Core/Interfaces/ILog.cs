@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SharedModule
+namespace Core
 {
     public interface ILogService
     {

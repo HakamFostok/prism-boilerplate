@@ -1,5 +1,6 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
+using SharedModule;
 using System.Windows;
 
 namespace WpfCoreApp
@@ -21,9 +22,7 @@ namespace WpfCoreApp
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            base.ConfigureModuleCatalog(moduleCatalog);
-
-            moduleCatalog.AddModule<SharedModule.SharedModule>();
+            moduleCatalog.AddModule<CommonServicesModule>();
             moduleCatalog.AddModule<MainModule.MainModule>();
         }
     }
