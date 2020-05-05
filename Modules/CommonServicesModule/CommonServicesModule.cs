@@ -2,7 +2,6 @@
 using NLog;
 using Prism.Ioc;
 using Prism.Modularity;
-using System;
 
 namespace SharedModule
 {

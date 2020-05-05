@@ -13,6 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainModule", "Modules\MainM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{E274215D-3212-4598-ADC7-2CB224331B71}"
 EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,13 +37,16 @@ Global
 		{E274215D-3212-4598-ADC7-2CB224331B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E274215D-3212-4598-ADC7-2CB224331B71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	
 	GlobalSection(NestedProjects) = preSolution
 		{249554B8-60F8-4AEB-A033-F533D8C07B48} = {C61A656E-515E-4911-AE99-A84B699992BD}
 		{7DF4675C-FD41-4B91-8F55-09CBA0791211} = {C61A656E-515E-4911-AE99-A84B699992BD}
 	EndGlobalSection
+	
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5B99288-3DFE-4FBB-9D92-4C81B78F8A30}
 	EndGlobalSection
