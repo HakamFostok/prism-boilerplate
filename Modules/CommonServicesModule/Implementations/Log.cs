@@ -1,8 +1,5 @@
 ﻿using Core;
 using NLog;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SharedModule
 {
@@ -10,7 +7,7 @@ namespace SharedModule
     {
         public void LogError(string log)
         {
-            var logger = LogManager.GetCurrentClassLogger();
+            Logger logger = LogManager.GetCurrentClassLogger();
             logger.Error(log);
         }
     }
