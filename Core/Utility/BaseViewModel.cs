@@ -1,6 +1,6 @@
-﻿using CommonServiceLocator;
-using Prism;
+﻿using Prism;
 using Prism.Events;
+using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Regions;
 using Prism.Services.Dialogs;
@@ -24,13 +24,13 @@ namespace Core
 
         protected BaseViewModel()
         {
-            _messageBoxService = ServiceLocator.Current.GetInstance<IMessageBoxService>();
-            _fileDialogService = ServiceLocator.Current.GetInstance<IFileDialogService>();
-            _logService = ServiceLocator.Current.GetInstance<ILogService>();
+            _messageBoxService = ContainerLocator.Current.Resolve<IMessageBoxService>();
+            _fileDialogService = ContainerLocator.Current.Resolve<IFileDialogService>();
+            _logService = ContainerLocator.Current.Resolve<ILogService>();
 
-            _dialogService = ServiceLocator.Current.GetInstance<IDialogService>();
-            _regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
-            _aggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            _dialogService = ContainerLocator.Current.Resolve<IDialogService>();
+            _regionManager = ContainerLocator.Current.Resolve<IRegionManager>();
+            _aggregator = ContainerLocator.Current.Resolve<IEventAggregator>();
         }
 
         protected void ShowParameterNullError([CallerMemberName] string callerName = null)

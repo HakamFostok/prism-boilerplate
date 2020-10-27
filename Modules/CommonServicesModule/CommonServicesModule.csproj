@@ -6,10 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommonServiceLocator" Version="2.0.5" />
-    <PackageReference Include="NLog" Version="4.7.4" />
-    <PackageReference Include="Prism.Core" Version="7.2.0.1422" />
-    <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
+    <PackageReference Include="NLog" Version="4.7.5" />
+    <PackageReference Include="Prism.Core" Version="8.0.0.1909" />
+    <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
   </ItemGroup>
 
   <ItemGroup>
