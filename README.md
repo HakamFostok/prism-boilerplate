@@ -3,7 +3,7 @@
 
 ### Technical Prerequisite
   1. Visual Studio 2019 
-  2. NET Core 3.1
+  2. .NET 5.0
   
 ### Personal Prerequisite
   You need to be familiar with 
