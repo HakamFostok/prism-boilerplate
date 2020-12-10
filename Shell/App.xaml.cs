@@ -1,7 +1,9 @@
-﻿using Prism.Ioc;
+﻿using System.Windows;
+
+using Prism.Ioc;
 using Prism.Modularity;
+
 using SharedModule;
-using System.Windows;
 
 namespace WpfCoreApp
 {

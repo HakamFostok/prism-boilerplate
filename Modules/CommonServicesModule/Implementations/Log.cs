@@ -1,4 +1,5 @@
 ﻿using Core;
+
 using NLog;
 
 namespace SharedModule

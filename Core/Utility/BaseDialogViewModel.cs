@@ -1,5 +1,6 @@
-using Prism.Services.Dialogs;
 using System;
+
+using Prism.Services.Dialogs;
 
 namespace Core
 {

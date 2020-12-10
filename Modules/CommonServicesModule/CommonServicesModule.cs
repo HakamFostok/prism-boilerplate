@@ -1,5 +1,7 @@
 ﻿using Core;
+
 using NLog;
+
 using Prism.Ioc;
 using Prism.Modularity;
 

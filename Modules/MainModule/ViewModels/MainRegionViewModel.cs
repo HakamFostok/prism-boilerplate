@@ -1,7 +1,9 @@
-﻿using Core;
+﻿using System.Windows.Input;
+
+using Core;
+
 using Prism.Commands;
 using Prism.Services.Dialogs;
-using System.Windows.Input;
 
 namespace MainModule.ViewModels
 {

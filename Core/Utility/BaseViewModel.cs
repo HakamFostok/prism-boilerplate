@@ -1,12 +1,13 @@
-﻿using Prism;
+﻿using System;
+using System.Linq;
+using System.Runtime.CompilerServices;
+
+using Prism;
 using Prism.Events;
 using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Regions;
 using Prism.Services.Dialogs;
-using System;
-using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace Core
 {

@@ -1,5 +1,6 @@
-﻿using Core;
-using System.Windows;
+﻿using System.Windows;
+
+using Core;
 
 namespace SharedModule
 {

@@ -1,6 +1,8 @@
-﻿using MainModule.Views;
+﻿using System;
+
+using MainModule.Views;
+
 using Prism.Services.Dialogs;
-using System;
 
 namespace MainModule
 {

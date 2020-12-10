@@ -1,5 +1,7 @@
 ﻿using Core;
+
 using MainModule.Views;
+
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
