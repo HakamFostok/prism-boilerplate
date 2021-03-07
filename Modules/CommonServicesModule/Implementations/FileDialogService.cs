@@ -13,7 +13,7 @@ namespace SharedModule
             if (string.IsNullOrEmpty(defaultExt))
                 throw new ArgumentNullException(nameof(defaultExt));
 
-            OpenFileDialog dialog = new OpenFileDialog
+            OpenFileDialog dialog = new()
             {
                 DefaultExt = defaultExt,
                 Multiselect = false
@@ -26,7 +26,7 @@ namespace SharedModule
             if (string.IsNullOrEmpty(defaultExt))
                 throw new ArgumentNullException(nameof(defaultExt));
 
-            OpenFileDialog dialog = new OpenFileDialog
+            OpenFileDialog dialog = new()
             {
                 DefaultExt = defaultExt,
                 Multiselect = false
