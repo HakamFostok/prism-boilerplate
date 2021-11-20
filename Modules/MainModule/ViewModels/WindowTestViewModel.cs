@@ -1,12 +1,11 @@
 ﻿using Core;
 
-namespace MainModule.ViewModels
+namespace MainModule.ViewModels;
+
+public class WindowTestViewModel : BaseDialogViewModel
 {
-    public class WindowTestViewModel : BaseDialogViewModel
+    public WindowTestViewModel()
     {
-        public WindowTestViewModel()
-        {
-            Title = "Hello World from window";
-        }
+        Title = "Hello World from window";
     }
 }
