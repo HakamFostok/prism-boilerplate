@@ -1,7 +1,6 @@
-﻿namespace Core
+﻿namespace Core;
+
+public static class RegionNames
 {
-    public static class RegionNames
-    {
-        public const string MainRegion = "MainRegion";
-    }
+    public const string MainRegion = "MainRegion";
 }

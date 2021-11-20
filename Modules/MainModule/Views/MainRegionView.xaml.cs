@@ -1,15 +1,14 @@
 ﻿using System.Windows.Controls;
 
-namespace MainModule.Views
+namespace MainModule.Views;
+
+/// <summary>
+/// Interaction logic for MainRegion.xaml
+/// </summary>
+public partial class MainRegionView : UserControl
 {
-    /// <summary>
-    /// Interaction logic for MainRegion.xaml
-    /// </summary>
-    public partial class MainRegionView : UserControl
+    public MainRegionView()
     {
-        public MainRegionView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

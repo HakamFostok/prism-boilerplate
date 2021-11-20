@@ -1,15 +1,14 @@
 ﻿using System.Windows.Controls;
 
-namespace MainModule.Views
+namespace MainModule.Views;
+
+/// <summary>
+/// Interaction logic for WindowTest.xaml
+/// </summary>
+public partial class WindowTestView : UserControl
 {
-    /// <summary>
-    /// Interaction logic for WindowTest.xaml
-    /// </summary>
-    public partial class WindowTestView : UserControl
+    public WindowTestView()
     {
-        public WindowTestView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }
