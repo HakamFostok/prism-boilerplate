@@ -1,7 +1,5 @@
-﻿using System;
-using System.Linq;
-using System.Runtime.CompilerServices;
-
+﻿using System.Runtime.CompilerServices;
+using Microsoft.Extensions.Logging;
 using Prism;
 using Prism.Events;
 using Prism.Ioc;
@@ -16,7 +14,7 @@ public abstract class BaseViewModel : BindableBase, IActiveAware
     // custome interfaces
     protected readonly IMessageBoxService _messageBoxService;
     protected readonly IFileDialogService _fileDialogService;
-    protected readonly ILogService _logService;
+    protected readonly ILogger _logger;
 
     // prism interfaces
     protected readonly IDialogService _dialogService;
@@ -27,19 +25,20 @@ public abstract class BaseViewModel : BindableBase, IActiveAware
     {
         _messageBoxService = ContainerLocator.Current.Resolve<IMessageBoxService>();
         _fileDialogService = ContainerLocator.Current.Resolve<IFileDialogService>();
-        _logService = ContainerLocator.Current.Resolve<ILogService>();
+        _logger = ContainerLocator.Current.Resolve<ILogger>();
 
         _dialogService = ContainerLocator.Current.Resolve<IDialogService>();
         _regionManager = ContainerLocator.Current.Resolve<IRegionManager>();
         _aggregator = ContainerLocator.Current.Resolve<IEventAggregator>();
     }
 
-    protected void ShowParameterNullError([CallerMemberName] string callerName = null) => _messageBoxService.ShowError($"Programming Error, parameter for '{callerName}' method is null");
+    protected void ShowParameterNullError([CallerMemberName] string callerName = null) =>
+        _messageBoxService.ShowError($"Programming Error, parameter for '{callerName}' method is null");
 
     protected void HandleException(Exception ex)
     {
         _messageBoxService.ShowError(ex.Message);
-        _logService.LogError(ex.ToString());
+        _logger.LogError(ex.ToString());
     }
 
     protected void ActivateRegionWithView<T>(string regionName)

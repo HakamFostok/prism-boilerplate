@@ -1,7 +1,4 @@
-﻿using System;
-
-using Core;
-
+﻿using Core;
 using Microsoft.Win32;
 
 namespace SharedModule;

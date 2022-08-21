@@ -19,5 +19,4 @@ public interface IMessageBoxService
     /// <param name="message"></param>
     /// <returns></returns>
     MessageBoxResult ShowConfirmation(string message);
-
 }
